@@ -46,3 +46,28 @@ function initializeSlideshow() {
     showSlide(currentSlide);
     setInterval(nextSlide, 5000);
 }
+
+// Function for the search box to display results
+$(document).ready(function() {
+    $('#searchInput').on('keyup', function() {
+        var query = $(this).val();
+        if (query.length > 2) { // Only search if query is at least 3 characters long
+            $.ajax({
+                url: 'https://api.themoviedb.org/3/search/movie',
+                data: {
+                    api_key: '50cc16a94438d47c3e061d1a50822165',
+                    query: query
+                },
+                success: function(response) {
+                    var html = '';
+                    response.results.slice(0, 5).forEach(function(movie) { // Only take the first 5 results
+                        html += '<li>' + movie.title + '</li>';
+                    });
+                    $('#results').html(html);
+                }
+            });
+        } else {
+            $('#results').html(''); // Clear results when query is too short
+        }
+    });
+});

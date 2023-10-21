@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Advanced searching and filtering for movies">
+
+        <title>Advanced Search</title>
+
+        <link rel="stylesheet" type="text/css" href="css/home.css">
+        <link rel="stylesheet" href="css/adv_search.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+
+    <body>
+        <!--Search bar-->
+        <div class="header">
+            <div class="logo">
+                <a href="home.html">Home</a>
+            </div>
+            <div class="search-container">
+                <form id="searchForm">
+                    <input type="text" id="searchInput" placeholder="Search for a movie..." size="80">
+                </form>
+            </div>
+        </div>
+
+        <div id="results" class="search-results">  </div>
+
+        <div id="container">
+            <h2>Advanced Search</h2>
+
+            <hr>
+
+            <h3>Find pages with...</h3>
+            <!--Title, release date, rating, genres, age rating, country-->
+
+            <form class="adv_options" id="filter-search">
+
+                <div class="search_option">
+                    <label for="all_words">title:</label>
+                    <input type="text" name="title" id="all_words">
+                </div>
+
+                <div class="search_option">
+                    <label for="exact_words">release date:</label>
+                    <input type="date" name="start-date" id="exact_words"> to <input type="date" name="end-date" id="exact_words">
+                </div>
+
+                <div class="search_option">
+                    <h4>Rating:</h4><br/>
+                    <div class="age-ratings">
+                        
+                        <input type="radio" id="rated-pg" name="age-radio"> 
+                        <label for="rated-pg">PG</label><br/>
+                        
+                        <input type="radio" id="rated-pg13" name="age-radio">
+                        <label for="rated-pg13">PG-13</label><br/>
+                        
+                        <input type="radio" id="rated-r" name="age-radio">
+                        <label for="rated-r">R</label><br/>
+                    </div>
+                </div>
+
+                <div class="search_option" id="genre-options">
+                    <h4>Genres:</h4><br/>
+                </div>
+
+                <div class="submit_btn">
+                    <input type="submit" value="Advanced Search">
+                </div>
+
+            </form>
+
+        </div>
+
+        <div id="filter-results">
+            <!--images of results inserted using javascript-->
+        </div>
+        <script src="js/adv_search.js"></script>
+    </body>
+</html>

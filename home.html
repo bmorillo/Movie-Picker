@@ -5,17 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movie Website</title>
     <link rel="stylesheet" type="text/css" href="css/home.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
     <div class="header">
         <div class="logo">
-            <a href="/">Home</a>
+            <a href="">Home</a>
+            <a href="adv_search.html">Advanced</a> <!--Added link to the advanced page-->
         </div>
         <div class="search-container">
-            <input type="text" class="search-input" placeholder="Search for movies...">
+            <form id="searchForm">
+                <input type="text" id="searchInput" placeholder="Search for a movie..." size="80">
+            </form>
         </div>
     </div>
     
+    <div id="results" class="search-results">  </div>
     <!-- Other content goes here -->
     
     <div class="slideshow" id="slideshow">
@@ -24,4 +29,3 @@
     <script src="js/home.js"></script>
 </body>
 </html>
-
