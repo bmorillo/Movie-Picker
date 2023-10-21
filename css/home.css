@@ -15,6 +15,7 @@ body {
 .header a {
     text-decoration: none;
     color: #fff;
+    padding:0 10px; /*Adjusted padding - Josabeth*/
 }
 .logo {
     margin-left: 10px;
@@ -48,4 +49,22 @@ body {
     max-width: 100%; 
     max-height: 70vh; 
     border: 5px solid #000000;
+}
+
+/*Styling for Search Box*/
+.search-results{
+    text-align: center;
+    list-style-type: none;
+}
+ul {
+  list-style: none;
+  padding: 0;
+  display: inline-block;
+}
+
+li {
+  border: 1px solid #000;
+  padding: 5px;
+  margin: 5px;
+  display: inline-block;
 }
