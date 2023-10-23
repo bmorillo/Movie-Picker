@@ -27,4 +27,32 @@ document.addEventListener("DOMContentLoaded", function () {
     if (movieId) {
         fetchMovieDetails(movieId);
     }
+
+    $('#searchInput').on('keyup', function () {
+        var query = $(this).val();
+        if (query.length > 2) { // Only search if the query is at least 3 characters long
+            $.ajax({
+                url: `${apiUrl}search/movie`,
+                data: {
+                    api_key: apiKey,
+                    query: query
+                },
+                success: function (response) {
+                    var html = '';
+                    response.results.slice(0, 5).forEach(function (movie) { // Only take the first 5 results
+                        html += '<li class="search-result" data-id="' + movie.id + '">' + movie.title + '</li>';
+                    });
+                    $('#results').html(html);
+
+                    // Attach a click event to each search result item to fetch movie details
+                    $('.search-result').on('click', function () {
+                        var movieId = $(this).data('id');
+                        fetchMovieDetails(movieId);
+                    });
+                }
+            });
+        } else {
+            $('#results').html(''); // Clear results when the query is too short
+        }
+    });
 });
