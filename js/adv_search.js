@@ -1,9 +1,10 @@
 // Your API key from TMDb
 const apiKey = "50cc16a94438d47c3e061d1a50822165";
+const apiUrl = `https://api.themoviedb.org/3/`;
 
 document.addEventListener("DOMContentLoaded", function () {
   // The base URL for TMDb API
-  const apiUrl = `https://api.themoviedb.org/3/`;
+  
 
   //fetches list of genres that TMDB contains and adds them to the website
   fetch(`${apiUrl}genre/movie/list?api_key=${apiKey}&language=en-US`)
@@ -92,21 +93,30 @@ $(document).ready(function() {
       var query = $(this).val();
       if (query.length > 2) { // Only search if query is at least 3 characters long
           $.ajax({
-              url: 'https://api.themoviedb.org/3/search/movie',
+            url: `${apiUrl}search/movie`,
               data: {
-                  api_key: '50cc16a94438d47c3e061d1a50822165',
+                api_key: apiKey,
                   query: query
               },
               success: function(response) {
                   var html = '';
                   response.results.slice(0, 5).forEach(function(movie) { // Only take the first 5 results
-                      html += '<li>' + movie.title + '</li>';
+                    html += '<li class="search-result" data-id="' + movie.id + '">' + movie.title + '</li>';
                   });
                   $('#results').html(html);
+
+                  // Attach a click event to each search result item to fetch movie details
+                  $('.search-result').on('click', function () {
+                    var movieId = $(this).data('id');
+                    fetchMovieDetails(movieId);
+                });
               }
           });
       } else {
           $('#results').html(''); // Clear results when query is too short
       }
   });
+  function fetchMovieDetails(movieId) {
+    window.location.href = `details.html?id=${movieId}`;
+  }
 });
