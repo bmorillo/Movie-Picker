@@ -10,6 +10,9 @@ document.addEventListener("DOMContentLoaded", function () {
             success: function (movie) {
                 console.log("Movie data:", movie); // Debugging: Check if the movie data is retrieved
                 var detailsHtml = `
+                    <div class="top-right">
+                        <a href="history.html?movieId=${movie.id}&movieTitle=${movie.title}">Add to History</a>
+                    </div>
                     <h2>${movie.title}</h2>
                     <p>Release Date: ${movie.release_date}</p>
                     <p>Overview: ${movie.overview}</p>
