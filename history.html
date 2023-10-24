@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="css/details.css">
-    <title>Movie Details</title>
+    <link rel="stylesheet" type="text/css" href="css/history.css">
+    <title>Movie History</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
@@ -15,21 +15,23 @@
         <div class="search-container">
             <form id="searchForm">
                 <input type="text" id="searchInput" placeholder="Search for a movie..." size="80">
+                <button type="submit">Search</button>
             </form>
         </div>
     </div>
-    <div id="movieDetails" class="movie-details">
-        <div class="title">
-            <h2>Title of the Movie</h2>
-        </div>
-        <div class="image">
-            <img src="https://image.tmdb.org/t/p/w500/movie-image.jpg" alt="Movie Title">
-        </div>
-        <div class="details">
-            <p>Release Date: Release Date Here</p>
-            <p>Overview: Movie Overview Here</p>
-        </div>
+
+    <div class="search-history">
+        <h2>Search History</h2>
+        <ul id="historyList"></ul>
     </div>
-    <script src="js/details.js"></script>
+    <!-- Add this button after the search history list -->
+    <button id="clearHistory">Clear History</button>
+
+
+    <div id="movieDetails" class="movie-details">
+        <!-- Movie details content will be displayed here -->
+    </div>
+
+    <script src="js/history.js"></script>
 </body>
 </html>
