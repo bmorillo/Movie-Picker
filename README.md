@@ -14,6 +14,7 @@ To set up the project, download the files from https://github.com/bmorillo/Movie
     <li>GitHub</li>
   <li>For Communication</li>
     <li>Discord</li>
+</ul>
 
 
 <h2>Citations</h2>
