@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/history.css">
+    <title>Movie History</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <a href="home.html">Home</a>
+        </div>
+        <div class="search-container">
+            <form id="searchForm">
+                <input type="text" id="searchInput" placeholder="Search for a movie..." size="80">
+                <button type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="search-history">
+        <h2>Search History</h2>
+        <ul id="historyList"></ul>
+    </div>
+    <!-- Add this button after the search history list -->
+    <button id="clearHistory">Clear History</button>
+
+
+    <div id="movieDetails" class="movie-details">
+        <!-- Movie details content will be displayed here -->
+    </div>
+
+    <script src="js/history.js"></script>
+</body>
+</html>

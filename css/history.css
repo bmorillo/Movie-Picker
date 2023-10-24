@@ -55,6 +55,8 @@ li {
     margin: 5px;
     display: inline-block;
 }
+
+/* Styles for "Add to History" button */
 .top-right {
     position: absolute;
     top: 10px;
