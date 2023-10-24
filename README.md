@@ -8,22 +8,19 @@ To set up the project, download the files from https://github.com/bmorillo/Movie
   <li>HTML/CSS</li>
   <li>Javascript & JQuery</li>
   <li>SQLite & Flask</li>
-  <li>For Task management & organization </li>
-    <li>Jira</li>
-  <li>For Project Management & Collaboration</li>
-    <li>GitHub</li>
-  <li>For Communication</li>
-    <li>Discord</li>
+  <li>Jira (For Task management & organization)</li>
+  <li>GitHub (For Project Management & Collaboration)</li>
+  <li>Discord (For Communication)</li>
 </ul>
 
 
 <h2>Citations</h2>
 <ul>
-  <li>https://developer.themoviedb.org/docs/getting-started
-</li>
+  <li>https://developer.themoviedb.org/docs/getting-started</li>
   <li>https://youtu.be/FlFyrOEz2S4?si=QPfZGXfrEeQaIamn</li>
   <li>https://youtu.be/9Bvt6BFf6_U?si=_mrf7oNvaudCm_Br</li>
   <li>https://www.w3schools.com/howto/howto_js_autocomplete.asp</li>
   <li>https://api.jquery.com/jQuery.ajax/</li>
   <li>https://www.w3schools.com/jquery/html_html.asp</li>
+  <li>https://youtu.be/eteq28RhIl8?si=5I8oFYHMcgwwIAc8</li>
 </ul>
