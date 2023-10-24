@@ -1,0 +1,1 @@
+DATABASE_FILE = 'movie_database.db'  # Path to your SQLite database file
